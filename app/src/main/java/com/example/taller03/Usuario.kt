@@ -1,13 +1,14 @@
 package com.example.taller03
 
-data class Usuario(
-    val nombre: String,
-    val apellido: String,
-    val email: String,
-    val password: String,
-    val imagenContacto: String,  // URL de la imagen
-    val numeroIdentificacion: String,
-    val latitud: Double,
-    val longitud: Double,
-    val estado: String
-)
+class Usuario{
+    var nombre: String = ""
+    var apellido: String = ""
+    var email: String = ""
+    var password: String = ""
+    var imagenContacto: String  = ""// URL de la imagen
+    var numeroIdentificacion: String = ""
+    var latitud: Double = 0.0
+    var longitud: Double = 0.0
+    var estado: Boolean = false
+    var uid: String = ""
+}

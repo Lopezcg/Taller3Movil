@@ -18,7 +18,8 @@ import com.google.firebase.ktx.Firebase
 class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
-    override fun onCreate(savedInstanceState: Bundle?)
+
+override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -28,6 +29,13 @@ class MainActivity : AppCompatActivity() {
         val btnLogIn: Button = findViewById(R.id.loginBtn)
         val txtBtnSignUp: TextView = findViewById(R.id.registerTxtBtn)
         listen(txtEmailIn,txtPassIn, btnLogIn, txtBtnSignUp)
+
+        RepositorioUsuarios.onDataReady = {
+            printUsuarios()
+        }
+
+        RepositorioUsuarios.inicializarUsuarios()
+
     }
 
     override fun onStart()
@@ -49,6 +57,12 @@ class MainActivity : AppCompatActivity() {
             startActivity(intentSignUp)
         }
     }
+
+    fun printUsuarios() {
+    RepositorioUsuarios.usuarios.forEach { usuario ->
+        Log.d("Usuario", "Nombre: ${usuario.nombre}, Email: ${usuario.email}")
+    }
+}
 
     private fun signInUser(pTxtEmailIn: EditText, pTxtPasswordIn: EditText)
     {

@@ -1,4 +1,4 @@
-# TALLER 2 COMPUTACIÓN MÓVIL 
+# TALLER 3 COMPUTACIÓN MÓVIL 
 ## Equipo
   
 <h3 align="center">Carlos Gabriel López M.</h3>
@@ -21,9 +21,9 @@
  
 ## VIDEO FUNCIONAMIENTO 
 
- https://youtu.be/odUaQBYhBEs?si=aGXymw1BO4U2hDY-
 
 
+https://youtu.be/TYIVdOF1evE
 
 
  
